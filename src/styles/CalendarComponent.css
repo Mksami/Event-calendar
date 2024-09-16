@@ -1,0 +1,288 @@
+/* Full container layout for the calendar */
+.calendar-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Full viewport height */
+    width: 100%;
+    overflow: hidden; /* Prevents unnecessary scrolling */
+  }
+  
+  .fc {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto; /* Allow scrolling inside the calendar grid */
+  }
+  
+  .fc-event-content {
+    font-size: 0.85rem;
+  }
+  
+  .fc .fc-toolbar {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  .fc-toolbar-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: capitalize;
+  }
+  /* General Button Styles */
+.fc-button {
+  background-color: #4caf50;  /* Change background color */
+  color: white;               /* Change text color */
+  border-radius: 5px;          /* Make button rounded */
+  border: none;                /* Remove border */
+  padding: 5px 10px;           /* Adjust padding */
+  font-size: 14px;             /* Adjust font size */
+}
+
+/* Hover Effect */
+.fc-button:hover {
+  background-color: #45a049;   /* Darker green on hover */
+  color: white;
+}
+
+/* Active State (when clicked) */
+.fc-button:active {
+  background-color: #3e8e41;   /* Even darker green when active */
+  color: white;
+}
+
+/* Disable default FullCalendar button outline */
+.fc-button:focus {
+  outline: none;               /* Remove focus outline */
+}
+
+/* Specific button targeting (e.g., the Today button) */
+.fc-today-button {
+  background-color: #2196f3;   /* Specific background color for Today button */
+}
+
+/* Disabled button state (e.g., when the Today button is disabled) */
+.fc-button.fc-state-disabled {
+  background-color: #e0e0e0;   /* Grey out disabled buttons */
+  color: #9e9e9e;
+  cursor: not-allowed;         /* Change cursor to indicate disabled state */
+}
+/* Remove borders for month, week, and day buttons */
+.fc-dayGridMonth-button,
+.fc-timeGridWeek-button,
+.fc-timeGridDay-button {
+  border: none;               /* Remove border */
+}
+
+/* Optional: Remove hover or focus borders */
+.fc-dayGridMonth-button:hover,
+.fc-timeGridWeek-button:hover,
+.fc-timeGridDay-button:hover,
+.fc-dayGridMonth-button:focus,
+.fc-timeGridWeek-button:focus,
+.fc-timeGridDay-button:focus {
+  border: none;               /* Ensure no border on hover or focus */
+}
+
+/* Remove borders for the previous and next arrow buttons */
+.fc-prev-button,
+.fc-next-button {
+  border: none;               /* Remove border */
+}
+
+/* Optional: Remove hover or focus borders */
+.fc-prev-button:hover,
+.fc-next-button:hover,
+.fc-prev-button:focus,
+.fc-next-button:focus {
+  border: none;               /* Ensure no border on hover or focus */
+}
+  /* Custom styles for toolbar buttons */
+  .fc .fc-toolbar .fc-button {
+    background-color: #fff !important;
+    border: 1px solid #007bff;
+    color: #cccccc;
+    border-radius: 3px;
+  }
+  .fc-button-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .fc-button {
+    border: none;
+    background-color: #f0f0f0;
+    color: #333;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .fc-button:hover {
+    background-color: #d8d8d8;
+  }
+  
+  .fc-prev-button, .fc-next-button {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+  }
+  
+  .fc-dayGridMonth-button, .fc-timeGridWeek-button, .fc-timeGridDay-button {
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+  
+  .fc-button.fc-button-active {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .fc .fc-dayGridMonth-button {
+    border-radius: 4px;
+  }
+  
+  .fc-button-group button {
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+  }
+  
+  .fc-button:hover {
+    background-color: #efefef;
+  }
+  
+  .fc-button.fc-button-active {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .fc .fc-button-primary {
+    /* background-color: var(--fc-button-bg-color); */
+    border-color: var(--fc-button-border-color);
+    color: var(--fc-button-text-color);
+}
+
+  /* Style for the custom prev/next buttons */
+.fc-customPrev-button,
+.fc-customNext-button {
+  background-color: white; /* Set background to white */
+  border: 1px solid lightblue; /* Light blue border */
+  border-radius: 5px; /* Slightly curved corners */
+  color: #007bff; /* Light blue text color */
+  padding: 5px 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.fc-customPrev-button:hover,
+.fc-customNext-button:hover {
+  background-color: #f0f8ff; /* Light blue background on hover */
+}
+
+.fc-customPrev-button:focus,
+.fc-customNext-button:focus {
+  outline: none; /* Remove default button outline on focus */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Light blue shadow on focus */
+}
+
+  
+  /* Custom event card styles */
+  .fc-v-event {
+   background: none !important;
+   border: none !important;
+  }
+  
+  .custom-event-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 8px;
+    width: 200px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    position: relative;
+  }
+
+  .blue-side{
+    width: 17px;
+    background-color: #007bff;
+    min-height: 100%;
+    display: block;
+    height: 83px;
+  }
+  
+  .event-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    width: 100%; /* Content takes up 90% of the width */
+  } 
+  .event-info {
+    display: flex;
+    flex-direction: column;
+  } 
+  .role {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .interviewer, .time {
+    font-size: 14px;
+    color: #555;
+  }
+      
+  .custom-event-card .event-badge {
+    background-color: #f4b400; /* Golden badge color */
+    color: white;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    font-weight: bold;
+    position: absolute;
+    top: -5px;
+    right: 0px;
+  }
+  
+  
+  /* Mobile responsiveness */
+  @media (max-width: 768px) {
+    .fc-toolbar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .fc-event-content {
+      font-size: 0.75rem;
+    }
+  
+    .fc-prev-button, .fc-next-button {
+      font-size: 1rem;
+      width: 30px;
+      height: 30px;
+    }
+  }
+  /* Custom CSS for FullCalendar day cells */
+
+/* .custom-day-cell-content {
+  font-weight: bold;         
+  text-align: center;        
+  display: flex;             
+  justify-content: center;  
+  align-items: center;       
+  height: 100%;            
+} */
+  
+  

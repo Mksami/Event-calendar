@@ -1,0 +1,52 @@
+.event-modal .modal {
+    z-index: 1050; /* Make sure it's above the calendar */
+  }
+  
+  .event-modal .modal-backdrop {
+    z-index: 1040; /* Ensure backdrop is properly layered */
+  }
+  
+  .event-modal .modal-header {
+    background-color: white;
+    border-bottom: none;
+    padding-bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .event-modal .modal-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .event-modal .close-btn {
+    font-size: 1.5rem;
+    color: #007bff;
+    cursor: pointer;
+  }
+  
+  .event-modal .modal-body {
+    max-height: 400px;
+    overflow-y: auto;
+    padding: 20px;
+  }
+  
+  .event-item {
+    margin-bottom: 15px;
+  }
+  
+  .event-item h5 {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  .event-item p {
+    font-size: 0.9rem;
+    margin: 2px 0;
+  }
+  
+  .event-item hr {
+    border: 0.5px solid #e0e0e0;
+  }
+  
