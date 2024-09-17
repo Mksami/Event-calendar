@@ -1,9 +1,9 @@
 .event-modal .modal {
-    z-index: 1050; /* Make sure it's above the calendar */
+    z-index: 1050; 
   }
   
   .event-modal .modal-backdrop {
-    z-index: 1040; /* Ensure backdrop is properly layered */
+    z-index: 1040;
   }
   
   .event-modal .modal-header {

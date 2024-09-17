@@ -12,9 +12,9 @@ const EventModal = ({ show, onHide, eventList }) => {
       show={show}
       onHide={onHide}
       className="event-modal"
-      centered          // Center the modal vertically on the screen
-      backdrop="static" // Ensure the backdrop is present and static
-      keyboard={false}  // Prevent closing with keyboard (Esc key)
+      centered         
+      backdrop="static"
+      keyboard={false}  
     >
       <Modal.Header>
         <Modal.Title>Meetings</Modal.Title>

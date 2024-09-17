@@ -14,8 +14,7 @@ const CalendarComponent = () => {
   const [eventList, setEventList] = useState([]);
   const [showModal, setShowModal] = useState(false);
   const [selectedEvent, setSelectedEvent] = useState(null);
-  const { events, loading, error } = useFetchEvents('2024-08-01', '2024-08-30'); // Fetch events
-  console.log("Kumar", events);
+  const { events, loading, error } = useFetchEvents(null, null); // Fetch events
   const groupedEvents = useGroupEvents(events);
  // Reference to the FullCalendar instance
  const calendarRef = useRef(null);
@@ -33,7 +32,6 @@ const CalendarComponent = () => {
   const handleEventClick = (clickInfo) => {
     console.log("clickInfo", clickInfo);
     setSelectedEvent(clickInfo.event);
-    console.log("SelectedEvent", selectedEvent);
     setShowModal(true);
   };
 
