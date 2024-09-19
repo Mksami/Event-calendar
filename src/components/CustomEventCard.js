@@ -5,8 +5,8 @@ import '../styles/CalendarComponent.css';
 import EventBadge from "./EventBadge";
 
 const CustomEventCard = ({ eventInfo }) => {
-  console.log("eventInfo", eventInfo);
-  const {title, start, end, event, extendedProps} = eventInfo;
+ // console.log("eventInfo", eventInfo);
+  const {extendedProps} = eventInfo;
   const {events}= extendedProps;
   
   const startTime =  moment(new Date(events[0].start)).format('h:mm A');

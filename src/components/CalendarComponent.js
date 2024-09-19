@@ -24,13 +24,13 @@ const CalendarComponent = () => {
       const calendarEvents = Object.entries(groupedEvents).flatMap(([start, events ]) =>
         events
       );
-  console.log("calendarEvents", calendarEvents);
+  // console.log("calendarEvents", calendarEvents);
       setEventList(calendarEvents); 
   }, [groupedEvents]);
 
   // Event click handler to open modal
   const handleEventClick = (clickInfo) => {
-    console.log("clickInfo", clickInfo);
+  //  console.log("clickInfo", clickInfo);
     setSelectedEvent(clickInfo.event);
     setShowModal(true);
   };
@@ -99,7 +99,7 @@ const CalendarComponent = () => {
 
 // Event content renderer (optional)
 function renderEventContent(eventInfo) {
-  console.log(">>>>",eventInfo);
+  // console.log(">>>>",eventInfo);
   return (
     <>{eventInfo &&
       <CustomEventCard
