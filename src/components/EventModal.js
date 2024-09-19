@@ -4,17 +4,17 @@ import { Modal, Button } from 'react-bootstrap';
 import '../styles/EventModal.css';
 
 const EventModal = ({ show, onHide, eventList }) => {
-    const eventsDetail = eventList.extendedProps;
-    const events = eventsDetail.events;
+  const eventsDetail = eventList.extendedProps;
+  const events = eventsDetail.events;
 
   return (
     <Modal
       show={show}
       onHide={onHide}
       className="event-modal"
-      centered         
+      centered
       backdrop="static"
-      keyboard={false}  
+      keyboard={false}
     >
       <Modal.Header>
         <Modal.Title>Meetings</Modal.Title>
@@ -33,6 +33,9 @@ const EventModal = ({ show, onHide, eventList }) => {
               <p>
                 Date: {moment(new Date(event.start)).format('DD MMM YYYY')} &nbsp;&nbsp;&nbsp; Time: {moment(new Date(event.start)).format('h:mm A')} - {moment(new Date(event.end)).format('h:mm A')}
               </p>
+              <a href={event.link} className="button-link" target="_blank" alt="Meeting Link">
+                Meeting Link
+              </a>
               {index !== events.length - 1 && <hr />}
             </div>
           ))
