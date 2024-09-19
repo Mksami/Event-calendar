@@ -1,5 +1,5 @@
 {
-  "homepage": "https://mksami.github.io/Event-calendar",
+ // "homepage": "https://mksami.github.io/Event-calendar",
   "name": "calendar-project",
   "version": "1.0.0",
   "private": true,
@@ -26,8 +26,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    // "predeploy": "npm run build",
+    // "deploy": "gh-pages -d build",
     "server": "npx json-server --watch public/calendarfromtoenddate.json --port=3001"
   },
   "eslintConfig": {
