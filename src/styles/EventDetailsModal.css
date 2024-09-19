@@ -1,0 +1,53 @@
+.modal-content-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  
+  .modal-details {
+    width: 60%;
+    padding-right: 20px;
+  }
+  
+  .modal-details p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  
+  .document-buttons {
+    margin-top: 20px;
+  }
+  
+  .doc-btn {
+    display: block;
+    margin-bottom: 10px;
+    width: 100%;
+    text-align: left;
+    padding: 10px;
+    font-size: 14px;
+  }
+  
+  .modal-logo-section {
+    width: 35%;
+    text-align: center;
+  }
+  
+  .meet-logo {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+  }
+  
+  .join-btn {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #007bff;
+    border-color: #007bff;
+  }
+  
+  .join-btn:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+  }
+  
